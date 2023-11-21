@@ -59,7 +59,7 @@ export default function Textform(props) {
          <button className="btn btn-primary mx-1 my-1" onClick={handleClearclick}>Clear Text</button>
          <br/><br/>
          <h2>Your text summery</h2>
-         <div>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} Characters</div>
+         <div>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} Characters</div>
          <h2>Preview</h2>
          <p>{text===""?"Enter Something in the Textbox for Preview":text}</p>
     </div>
